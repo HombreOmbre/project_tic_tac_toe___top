@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="The Odin Project favicon icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="TOP Favicon Logo" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Tic Tac Toe</title>
 </head>
 <body>
-    
-    <script src="script/index.js"></script>
+    <h1>Tic Tac Toe</h1>
+
+    <div class="container">
+        <div class="turn"></div>
+        <div class="game_field"></div>
+        <form action="#" class="controls">
+            <div class="top">
+                <input type="text" id="player_one" name="p_one" required placeholder="Player Two Name">
+                <input type="text" id="player_two" name="p_two" required placeholder="Player Two Name">
+            </div>
+            <div class="bottom">
+                <button type="button" id="start_btn">Start Button</button>
+                <button type="button" id="restart_btn">Restart Button</button>
+            </div>
+        </form>
+        <div class="message_box">
+            <div id="message"></div>
+            <div id="scoreboard"></div>
+        </div>
+    </div>
+
+    <script src="./script/index.js"></script>
 </body>
 </html>
