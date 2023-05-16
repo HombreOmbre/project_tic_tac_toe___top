@@ -108,7 +108,12 @@ const gameController = (() => {
         gameSquares.forEach((square) => {
             square.addEventListener('click', handleClick);
         });
-        displayController.showScoreboard(players[currentPlayerIndex].getScore(), players[currentPlayerIndex].getName(), players[currentPlayerIndex === 0 ? 1 : 0].getScore(), players[currentPlayerIndex === 0 ? 1 : 0].getName());
+        displayController.showScoreboard(
+            players[currentPlayerIndex].getScore(), 
+            players[currentPlayerIndex].getName(), 
+            players[currentPlayerIndex === 0 ? 1 : 0].getScore(), 
+            players[currentPlayerIndex === 0 ? 1 : 0].getName()
+        );
     };
 
     const restart = () => {
@@ -133,7 +138,12 @@ const gameController = (() => {
         if (_checkForWin(displayController.getGameboard())) {
             gameOver = true;
             players[currentPlayerIndex].winRound()
-            displayController.showScoreboard(players[currentPlayerIndex].getScore(), players[currentPlayerIndex].getName(), players[currentPlayerIndex === 0 ? 1 : 0].getScore(), players[currentPlayerIndex === 0 ? 1 : 0].getName());
+            displayController.showScoreboard(
+                players[currentPlayerIndex].getScore(), 
+                players[currentPlayerIndex].getName(), 
+                players[currentPlayerIndex === 0 ? 1 : 0].getScore(), 
+                players[currentPlayerIndex === 0 ? 1 : 0].getName()
+            );
             displayController.showMessage(`${players[currentPlayerIndex].getName()} won!`);
         } else if (_checkForTie(displayController.getGameboard())) {
             gameOver = true;
